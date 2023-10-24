@@ -1,0 +1,93 @@
+@use "../../scss/variables" as var;
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  margin-inline: var.$spacing-container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    margin-inline: var.$lg-spacing-container;
+  }
+
+  @media (min-width: 64rem) {
+    margin-inline: var.$xl-spacing-container;
+  }
+
+  .btn-nav {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: -999px;
+    opacity: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+
+    @media (min-width: 768px) {
+      all: unset;
+    }
+
+    transition: opacity 0.3s;
+
+    &.active {
+      box-shadow: 0 -80px 91px 231px #fefcf7;
+      left: 0;
+      opacity: 1;
+
+      @media (min-width: 768px) {
+        all: unset;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 7rem;
+      padding-bottom: 2.5rem;
+
+      @media (min-width: 768px) {
+        padding: 0;
+        flex-direction: row;
+      }
+    }
+
+    ul li a {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      font-family: var.$ff-fraunces;
+      color: var.$clr-dark-grey-blue;
+      transition: 0.3s;
+
+      &:hover {
+        color: var.$clr-dark-grey-blue;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 0.75rem;
+        font-family: var.$ff-barlow;
+        color: var.$clr-grey;
+        font-weight: var.$fw-700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

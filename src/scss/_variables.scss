@@ -1,0 +1,49 @@
+/* Colors */
+$clr-dark-cyan: #0e8784;
+$clr-dark-grey-blue: #333d4b;
+$clr-pale-orange: #fdd6ba;
+$clr-light-cream: #fefcf7;
+$clr-grey: #83888f;
+
+/* Typography */
+$ff-fraunces: "Fraunces", serif;
+$ff-barlow: "Barlow", sans-serif;
+
+$fw-400: 400;
+$fw-700: 700;
+$fw-900: 900;
+
+/* Utilities */
+$spacing-container: 1.5rem;
+$lg-spacing-container: 2.5rem;
+$xl-spacing-container: 5rem;
+$rounded: 10px;
+$btn-rounded: 6px;
+$spacing-section: 7.5rem;
+
+/* Mixin */
+
+@mixin section-hero-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin section-hero($img, $height) {
+  background: $img no-repeat;
+  background-size: cover;
+  height: $height;
+  border-radius: $rounded;
+  margin-bottom: $spacing-section;
+  margin-inline: $spacing-container;
+}
+
+@mixin section-hero-content($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+  padding-inline: 1.5rem;
+  gap: 1.5rem;
+  color: $clr-light-cream;
+  text-align: center;
+}
