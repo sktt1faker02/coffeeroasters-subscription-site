@@ -38,8 +38,8 @@ const Subscribe = () => {
     }
   };
 
-  console.log(activeIndex);
-  console.log(userSelected);
+  // console.log(activeIndex);
+  // console.log(userSelected);
 
   const handleRadioChange = (e, type) => {
     console.log(e, type);

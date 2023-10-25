@@ -37,7 +37,7 @@ const Modal = ({ showModal, userSelected, closeModal, totalPrice }) => {
           <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout. </p>
 
           <Link className="cta-create-plan btn-primary" to="/">
-            Checkout<span>${totalPrice.toFixed(2)} / mo</span>
+            Checkout <span>-</span> <span>${totalPrice.toFixed(2)} / mo</span>
           </Link>
         </div>
       </div>
